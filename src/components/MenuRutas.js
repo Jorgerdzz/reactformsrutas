@@ -8,7 +8,8 @@ class MenuRutas extends Component {
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/cine">Cine</a></li>
-                    <li><a href="/musica">Múscia</a></li>
+                    <li><a href="/musica">Música</a></li>
+                    <li><a href="/formsimple">Formulario</a></li>
                 </ul>
             </div>
         )
