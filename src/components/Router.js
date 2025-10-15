@@ -13,7 +13,7 @@ export default class Router extends Component {
             <Route path='/' element={<Home/>}/>
             <Route path='/cine' element={<Cine/>}/>
             <Route path='/musica' element={<Musica/>}/>
-            <Route path='/formsimple' element={FormSimple}/>
+            <Route path='/formsimple' element={<FormSimple/>}/>
         </Routes>
       </BrowserRouter>
     )
