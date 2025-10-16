@@ -10,6 +10,7 @@ class MenuRutas extends Component {
                     <li><a href="/cine">Cine</a></li>
                     <li><a href="/musica">Música</a></li>
                     <li><a href="/formsimple">Formulario</a></li>
+                    <li><a href="/collatz">Collatz</a></li>
                 </ul>
             </div>
         )
