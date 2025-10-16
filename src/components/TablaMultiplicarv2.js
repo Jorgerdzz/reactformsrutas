@@ -22,6 +22,7 @@ class TablaMultiplicarv2 extends Component {
         numeros = []
 
         generarNumerosAleatorios = () => {
+            this.numeros = []
             for(let i=0; i<=5; i++){
                 let aleatorio = Math.floor(Math.random()*100);
                 this.numeros.push(aleatorio);
