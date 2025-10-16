@@ -19,21 +19,19 @@ class TablaMultiplicarv2 extends Component {
             })
         }
 
+        numeros = []
+
         generarNumerosAleatorios = () => {
-            let aux = [];
             for(let i=0; i<=5; i++){
                 let aleatorio = Math.floor(Math.random()*100);
-                aux.push(aleatorio);
+                this.numeros.push(aleatorio);
             }
-            this.setState({
-                numeros: aux
-            })
+            
         }
     
         state = {
             numero: 0, 
             resultado: [],
-            numeros: []
         }
 
 
@@ -41,18 +39,19 @@ class TablaMultiplicarv2 extends Component {
         render () {
             return(
                 <div>
+                    {this.generarNumerosAleatorios()}
                     <h1>Tabla multiplicar</h1>
-                    <select onClick={this.generarNumerosAleatorios} ref={this.cajaNumero}>
-                        {
-                            this.state.numeros.map((numeros, index) => {
-                                return(
-                                    <option key={index}>{numeros}</option>
-                                )
-                            })
-                        }
-                    </select>
-
-                    <form onSubmit={this.generarTablaMultiplicar}>  
+                    <form onSubmit={this.generarTablaMultiplicar}>
+                        <label>Seleccione un número del select </label>
+                        <select ref={this.cajaNumero}>
+                            {
+                                this.numeros.map((numeros, index) => {
+                                    return(
+                                        <option key={index}>{numeros}</option>
+                                    )
+                                })
+                            }
+                        </select><br></br>  
                         <button>Generar tabla multiplicar</button>
                         <table border={1}>
                             <thead>
